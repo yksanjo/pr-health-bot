@@ -1,0 +1,14 @@
+name: 'PR Health Bot'
+description: 'Automatically comments on Pull Requests with a PR Health Check summary'
+author: 'PR Health Bot'
+branding:
+  icon: 'activity'
+  color: 'blue'
+inputs:
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+

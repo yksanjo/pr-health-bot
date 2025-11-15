@@ -1,0 +1,38 @@
+{
+  "name": "pr-health-bot",
+  "version": "1.0.0",
+  "description": "GitHub Action that automatically comments on Pull Requests with a PR Health Check summary",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "package": "npm run build && ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github-action",
+    "pr",
+    "pull-request",
+    "health-check",
+    "code-quality"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yksanjo/pr-health-bot.git"
+  },
+  "homepage": "https://github.com/yksanjo/pr-health-bot#readme",
+  "bugs": {
+    "url": "https://github.com/yksanjo/pr-health-bot/issues"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.3.3"
+  }
+}
+
